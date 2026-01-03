@@ -7,7 +7,7 @@ import torch.nn.functional as F
 
 app = FastAPI()
 
-MODEL_NAME = "openai/clip-vit-base-patch32"
+MODEL_NAME = "openai/clip-vit-base-patch16"
 device = "cuda" if torch.cuda.is_available() else "cpu"
 
 model = CLIPModel.from_pretrained(MODEL_NAME).to(device)
